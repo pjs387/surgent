@@ -1,0 +1,75 @@
+<script>
+  switch (window.location.pathname) {
+
+    case '/course-options':
+
+    $('[href="/cpa-course-detail/AUD0-2015-01-NCPE"]').on('click', function() {
+        ga('ec:addProduct', {
+          'id': 'AUD0-2015-01-NCPE',
+          'name': 'Auditing and Attestation (AUD)',
+          'category': 'NCPE',
+          'brand': 'CPA Review',
+          'variant': '2015',
+          'price': 599.00
+        });
+        ga('ec:setAction', 'click');
+        ga('send', 'event', 'e-Commerce', 'click', 'Product Clicks');
+      });
+
+    $('[href="/cpa-course-detail/BEC0-2015-01-NCPE"]').on('click', function() {
+        ga('ec:addProduct', {
+          'id': 'BEC0-2015-01-NCPE',
+          'name': 'Business Environment and Concepts (BEC)',
+          'category': 'NCPE',
+          'brand': 'CPA Review',
+          'variant': '2015',
+          'price': 599.00
+        });
+        ga('ec:setAction', 'click');
+        ga('send', 'event', 'e-Commerce', 'click', 'Product Clicks');
+      });
+
+    $('[href="/cpa-course-detail/CPAP-2015-01-NCPE"]').on('click', function() {
+        ga('ec:addProduct', {
+        'id': 'FAR0-2015-01-NCPE',
+        'name': 'Financial Accounting and Reporting (FAR)',
+        'category': 'NCPE',
+        'brand': 'CPA Review',
+        'variant': '2015',
+        'price': 599.00
+        });
+        ga('ec:setAction', 'click');
+        ga('send', 'event', 'e-Commerce', 'click', 'Product Clicks');
+      });
+
+    $('[href="/cpa-course-detail/FAR0-2015-01-NCPE"]').on('click', function() {
+        ga('ec:addProduct', {
+          'id': 'CPAP-2015-01-NCPE',
+          'name': 'Complete 4 Part Course',
+          'category': 'NCPE',
+          'brand': 'CPA Review',
+          'variant': '2015',
+          'price': 599.00
+        });
+        ga('ec:setAction', 'click');
+        ga('send', 'event', 'e-Commerce', 'click', 'Product Clicks');
+      });
+
+    $('[href="/cpa-course-detail/REG0-2015-01-NCPE"]').on('click', function() {
+        ga('ec:addProduct', {
+        'id': 'REG0-2015-01-NCPE',
+        'name': 'Regulation (REG)',
+        'category': 'NCPE',
+        'brand': 'CPA Review',
+        'variant': '2015',
+        'price': 599.00
+        });
+        ga('ec:setAction', 'click');
+        ga('send', 'event', 'e-Commerce', 'click', 'Product Clicks');
+      });
+
+      break;
+      
+  }
+
+</script>

@@ -1,0 +1,23 @@
+function setCampaign() {
+
+	if ($.cookie("campaign-id") != null) { // if a value is set for the cookie, then use it
+
+		var campaignID = $.cookie("campaign-id");
+
+	} else { // if no value is set for the cookie, then use default
+
+		var campaignID = '2C4DB699-9294-E611-810D-000D3A104BC0';
+
+}
+
+	if (window.location.hostname == 'qa.surgentcpareview.com') {
+
+		$('#ContentPlaceHolder1_C006_ctl00_ctl00_ctl00_C028_ctl00_ctl00_txtHiddenStatic').val(campaignID) // input field in QA
+
+	} else {
+
+		$('#ContentPlaceHolder1_C006_ctl00_ctl00_ctl00_C029_ctl00_ctl00_txtHiddenStatic').val(campaignID) // input field in Prod
+
+	}
+
+}

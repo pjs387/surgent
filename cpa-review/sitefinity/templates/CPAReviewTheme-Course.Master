@@ -1,0 +1,195 @@
+﻿<%@ Master Language="C#" %>
+<%@ Register Src="~/Custom/Surgent/CPAReviewControls/CPAReviewThemeNavigation.ascx" TagPrefix="uc1" TagName="CPAReviewThemeNavigation" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head id="Head1" runat="server">
+      <title>Surgent | CPA Review</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      <script src="//use.typekit.net/cem5eox.js"></script>
+    <script>try { Typekit.load(); } catch (e) { }</script>
+      <link rel="stylesheet" type="text/css" href="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/Global/styles.css">
+      <link type="text/css" href="/packages/PagedList.Mvc.3.18.0.0/Content/Content/PagedList.css" rel="stylesheet" />
+      <%--<link rel="stylesheet" type="text/css" href="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/Global/slick.css"/>--%>
+      <link href="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/Global/Site.css" rel="stylesheet" type="text/css" />
+      <script src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/modernizr/modernizr.js"></script>
+      <!--[if lt IE 9]>
+        <link type="text/css" rel="stylesheet" href="/assets/css/ie.css" />
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+  </head>
+
+  <body class='microsite'>
+        <!-- Google Tag Manager NoScript-->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WF5VGC"
+            height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager NoScript-->
+    <script type="text/javascript">
+        /* Google Tag Manager */
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WF5VGC');
+        /*End Google Tag Manager*/
+    </script>
+      <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" />
+    <div id="header-wrap" >
+        <div id="header-top" class=''>
+          <div class='row'>
+            <div class='columns medium-6 hide-for-small'>
+                <span class="number hide-for-small">Customer Service: <b><a href="tel:8007787436">800-778-7436</a></b> &nbsp;&nbsp;&nbsp;&nbsp;<a class="contactLink" href="/cpareview/cpa-contact-us">Contact</a></span>
+                <%--<asp:ContentPlaceHolder ID="search" runat="server">
+                                </asp:ContentPlaceHolder>--%>
+              <%--<input type='text' value='Search' class='search' onFocus="if (this.value=='Search'){this.value='';}"
+onBlur="if (this.value==''){this.value='Search';}"/>--%>
+            </div>
+            <div class='columns medium-5 hide-for-small'>
+              <%--<span class='number'>Customer Service: <b>888-123-4567</b></span>--%>
+            </div>
+            <div class='columns medium-4'>
+              <div class='usernav'>
+                 <ul>
+                    <%--<li><a class='cart' href=''>0</a></li>
+                    <li><a class='name md-trigger' href='#' data-modal="sign-in">Sign In</a></li>--%>
+                     <asp:ContentPlaceHolder ID="userAccount" runat="server">
+                                </asp:ContentPlaceHolder>
+                  </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <nav class="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+              <li class="name">
+                <a href="/cpareview"><img class='logo' src='/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/images/surgent-cpa-review-logo-@2x.png' ></a>
+                <h1></h1>
+              </li>
+
+              <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            </ul>
+            <uc1:CPAReviewThemeNavigation runat="server" id="CPAReviewThemeNavigation" />
+            <%--<section class="top-bar-section">
+
+
+
+
+              <ul class="top">
+                <li class=""><a href="#">About</a></li>
+                <li class=""><a href="#">Blog</a></li>
+                <li class=""><a href="#">Contact</a></li>
+              </ul>
+              <ul class="bottom">
+
+
+                <li class="has-dropdown">
+                  <a href="#">About the Course</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Course Features</a></li>
+                    <li><a href="#">CPA Exam Pass Rates</a></li>
+                    <li><a href="#">Instructors</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">How the Exam Works</a></li>
+                  </ul>
+                </li>
+                <li class="has-dropdown">
+                  <a href="#">Becoming a CPA</a>
+                  <ul class="dropdown">
+                    <li><a href="#">CPA Requirements</a></li>
+                    <li><a href="#">How the Exam Works</a></li>
+                    <li><a href="#">How to Prepare</a></li>
+                  </ul>
+                </li>
+                <li class="has-dropdown">
+                  <a href="#">Partnerships</a>
+                  <ul class="dropdown">
+                    <li><a href="#">State Societies</a></li>
+                    <li><a href="#">Firms</a></li>
+                    <li><a href="#">Colleges & Universities</a></li>
+                    <li><a href="#">Beta Alpha Psi</a></li>
+                    <li><a href="#">Student Ambassador Program</a></li>
+                  </ul>
+                </li>
+                <li class="has-dropdown">
+                  <a href="#">CPA Review Blog</a>
+                </li>
+                <li class="hide-for-medium-up">
+                  <a href="#">Enroll Now</a>
+                </li>
+                <li class='hide-for-small' id="noHover">
+                    <div class='cpa-nav-register'><a id="cpa-nav-button" href="#">Enroll Now</a></div>
+                </li>
+              </ul>
+
+
+            </section>--%>
+          </nav>
+
+
+        </div>
+<!-- END OF HEADER -->
+  <div id = 'cpa-individual-course'>
+    <%--<div class="row">
+      <div class="columns medium-12">--%>
+          <asp:ContentPlaceHolder ID="ContentBlock1" runat="server">
+            </asp:ContentPlaceHolder>
+   <%--   </div>
+    </div>--%>
+      
+    <%--<div class="row">
+      <hr> 
+      <div id="offered-courses" class='medium-12 columns'>
+        <h4>More Options:</h4>
+        <div class="medium-3 columns">
+          <div class='columns medium-11 medium-centered'><span><a class='arrow-right' href="#">Complete 4-Part Course*</a>
+          <p class="small">* Savings of over $200!</p></span></div>
+        </div>
+        <div class="medium-3 columns">
+          <div class='columns medium-11 medium-centered'><span><a class='arrow-right'  href="#">Business Environment and Concepts (BEC)</a></span></div>
+        </div>
+        <div class="medium-3 columns">
+          <div class='columns medium-11 medium-centered'><span><a class='arrow-right'  href="#">Financial Accounting and Reporting (FAR)</a></span></div>
+        </div>
+        <div class="medium-3 columns">
+          <div class='columns medium-11 medium-centered'><span><a class='arrow-right'  href="#">Regulation (REG)</a></span></div>
+        </div>      
+      </div>
+    </div>    
+    <div id='cpa-bottom-register' class='row'>
+    <hr>
+      <div class="columns medium-6">
+        <h2>State Society Members</h2>
+        <p>If you have a coupon code provided via your State Society, enter it during the checkout process to receive your 20% membership discount!</p>
+      </div>
+      <div class="columns medium-6">
+        <h2>Questions or Comments?</h2>
+        <p>Reach out via our <a href="#">web form</a> or call 1-800-778-7436</p>
+        <img src='//Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/images/godaddy-verified-secure.png'>
+      </div>
+    </div>--%>
+  </div>
+          <asp:ContentPlaceHolder ID="footerBlock" runat="server">
+            </asp:ContentPlaceHolder>
+          </form>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://api.html5media.info/1.1.6/html5media.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/foundation/js/foundation.min.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/slick.min.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/jquery-hoverIntent/jquery.hoverIntent.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/functions.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+</body>
+</html>

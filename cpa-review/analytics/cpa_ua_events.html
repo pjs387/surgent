@@ -1,0 +1,40 @@
+<script>
+  (function($) {
+
+    $(function() {
+
+      var trackGA = function(trackEvent, action, actionName) {
+        ga('send', 'event', trackEvent, action, actionName);
+      }
+
+      // $('a:contains(Enroll Now)').on('click', function() {
+      //   trackGA('View', 'click', 'CPA Review Enroll Now');
+      // });
+
+      $('a:contains("Try Us For Free ")').on('click', function() {
+        trackGA('View', 'click', 'CPA Review View Free Trial');
+      });
+
+      $('[onclick="submitTrialForm();"]').on('click', function() {
+        trackGA('Submit', 'click', 'CPA Review Submit Free Trial');
+      });
+
+      // $('.ui-button-text').on('click', function() {
+      //   trackGA('View', 'click', 'Accept EULA & Start Video');
+      // });
+
+    });
+
+  }(jQuery));
+
+  // $('').on('click', function(e) {
+  //   var element = $(this),
+  //     eventLabel = element.data('event-label')
+  //   eventCategory = element.data('event-category');
+  //   eventLabel = (eventLabel ? eventLabel : element.text());
+  //   eventCategory = (eventCategory ? eventCategory : window.location.pathname);
+
+  //   ga('send', 'event', eventCategory, 'click', eventLabel);
+
+  // });
+</script>

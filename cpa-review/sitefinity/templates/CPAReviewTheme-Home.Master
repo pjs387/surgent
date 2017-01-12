@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" %>
+<%@ Register Src="~/Custom/Surgent/CPAReviewControls/CPAReviewThemeNavigation.ascx" TagPrefix="uc1" TagName="CPAReviewThemeNavigation" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head id="Head1" runat="server">
+      <title>Surgent | CPA Review</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      <script src="//use.typekit.net/cem5eox.js"></script>
+    <script>try { Typekit.load(); } catch (e) { }</script>
+      <link rel="stylesheet" type="text/css" href="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/Global/styles.css">
+      <%--<link rel="stylesheet" type="text/css" href="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/Global/slick.css"/>--%>
+      <link href="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/Global/Site.css" rel="stylesheet" type="text/css" />
+      <link type="text/css" href="/packages/PagedList.Mvc.3.18.0.0/Content/Content/PagedList.css" rel="stylesheet" />
+      <script src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/modernizr/modernizr.js"></script>
+      <!--[if lt IE 9]>
+        <link type="text/css" rel="stylesheet" href="/assets/css/ie.css" />
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+  </head>
+
+  <body class='microsite'>
+        <!-- Google Tag Manager NoScript-->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WF5VGC"
+            height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager NoScript-->
+    <script type="text/javascript">
+        /* Google Tag Manager */
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WF5VGC');
+        /*End Google Tag Manager*/
+    </script>
+      <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" />
+    <div id="header-wrap" >
+        <div id="header-top" class=''>
+          <div class='row'>
+            <div class='columns medium-6 hide-for-small'>
+                <span class="number hide-for-small">Customer Service: <b><a href="tel:8007787436">800-778-7436</a></b> &nbsp;&nbsp;&nbsp;&nbsp;<a class="contactLink" href="/cpareview/cpa-contact-us">Contact</a></span>
+            </div>
+            <div class='columns medium-5 hide-for-small'>
+            </div>
+            <div class='columns medium-4'>
+              <div class='usernav'>
+                 <ul>
+                     <asp:ContentPlaceHolder ID="userAccount" runat="server">
+                                </asp:ContentPlaceHolder>
+                  </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <nav class="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+              <li class="name">
+                <a href="/cpareview"><img class='logo' src='/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/images/surgent-cpa-review-logo-@2x.png' ></a>
+                <h1></h1>
+              </li>
+
+              <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            </ul>
+            <uc1:CPAReviewThemeNavigation runat="server" id="CPAReviewThemeNavigation" />
+          </nav>
+
+
+        </div>
+<!-- END OF HEADER -->
+  <!--START OF CPA HOME DISPLAY-->
+        <div> <%--id='cpa-home-display'--%>
+            <div> <%--class='row'--%>
+                <asp:ContentPlaceHolder ID="hero" runat="server">
+                                </asp:ContentPlaceHolder>
+                <div class='columns medium-5'>
+                </div>
+            </div>
+        </div>
+        <!--END OF CPA HOME DISPLAY-->
+
+        <div id="cpa-home-content">
+            <div class='row customWidthContainer'>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                <div class='columns medium-6 medium-push-1'>
+                    
+                </div>
+            </div>
+
+
+        </div>
+        <!-- PASS THE EXAM  FOR LARGE -->
+        <div id="pass-exam" ><%--class="hide-for-medium"--%>
+            <div class='row customWidthContainer'>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                </asp:ContentPlaceHolder>
+              <div class='columns medium-12'>
+              </div>
+            </div>
+        </div>
+        <!--START OF QUOTES-->
+        <div id='cpa-home-quotes'>
+            <div class='home-quote'>
+              <div class="quote">
+                <div class='row customWidthContainer'>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                                </asp:ContentPlaceHolder>
+                  <div class='columns medium-8 medium-centered'>
+                  </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    <!--END OF QUOTES-->
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                                </asp:ContentPlaceHolder>
+          <asp:ContentPlaceHolder ID="footerBlock" runat="server">
+            </asp:ContentPlaceHolder>
+          </form>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://api.html5media.info/1.1.6/html5media.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/foundation/js/foundation.min.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/slick.min.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/jquery-hoverIntent/jquery.hoverIntent.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/functions.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+</body>
+</html>

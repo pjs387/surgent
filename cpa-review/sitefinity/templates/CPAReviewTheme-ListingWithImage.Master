@@ -1,0 +1,196 @@
+﻿<%@ Master Language="C#" %>
+
+<%@ Register Src="~/Custom/Surgent/CPAReviewControls/CPAReviewThemeNavigation.ascx" TagPrefix="uc1" TagName="CPAReviewThemeNavigation" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Surgent | CPA Review</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script src="//use.typekit.net/cem5eox.js"></script>
+    <script>try { Typekit.load(); } catch (e) { }</script>
+
+    <!--[if lt IE 9]>
+        <link type="text/css" rel="stylesheet" href="/assets/css/ie.css" />
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/Global/styles.css" />
+    <%--<link rel="stylesheet" type="text/css" href="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/Global/slick.css"/>--%>
+
+
+    <link href="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/Global/Site.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" href="/packages/PagedList.Mvc.3.18.0.0/Content/Content/PagedList.css" rel="stylesheet" />
+</head>
+
+<body class='microsite'>
+      <!-- Google Tag Manager NoScript-->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WF5VGC"
+            height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager NoScript-->
+    <script type="text/javascript">
+        /* Google Tag Manager */
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WF5VGC');
+        /*End Google Tag Manager*/
+    </script>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+        <div id="header-wrap">
+            <div id="header-top" class=''>
+                <div class='row'>
+                    <div class='columns medium-6 hide-for-small'>
+                        <span class="number hide-for-small">Customer Service: <b><a href="tel:8007787436">800-778-7436</a></b> &nbsp;&nbsp;&nbsp;&nbsp;<a class="contactLink" href="/cpareview/cpa-contact-us">Contact</a></span>
+                        <%--<asp:ContentPlaceHolder ID="search" runat="server">
+                                </asp:ContentPlaceHolder>--%>
+                        <%--<input type='text' value='Search' class='search' onFocus="if (this.value=='Search'){this.value='';}"
+onBlur="if (this.value==''){this.value='Search';}"/>--%>
+                    </div>
+                    <div class='columns medium-5 hide-for-small'>
+                        <%--<span class='number'>Customer Service: <b>888-123-4567</b></span>--%>
+                    </div>
+                    <div class='columns medium-4'>
+                        <div class='usernav'>
+                            <ul>
+                                <%--<li><a class='cart' href=''>0</a></li>
+                    <li><a class='name md-trigger' href='#' data-modal="sign-in">Sign In</a></li>--%>
+                                <asp:ContentPlaceHolder ID="userAccount" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <nav class="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+              <li class="name">
+                <a href="/cpareview"><img class='logo' src='/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/images/surgent-cpa-review-logo-@2x.png' ></a>
+                <h1></h1>
+              </li>
+
+              <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            </ul>
+            <uc1:CPAReviewThemeNavigation runat="server" id="CPAReviewThemeNavigation" />
+            
+          </nav>
+
+
+        </div>
+        <!-- END OF HEADER -->
+        <asp:ContentPlaceHolder ID="heroPlaceholder" runat="server">
+        </asp:ContentPlaceHolder>
+        <!--START OF TOPLEVEL HERO-->
+        <%--<div id='top-subpage-hero'>
+            <div class='row'>
+                <div class='medium-centered medium-6 columns'>
+                    <h1>About the Course</h1>
+                </div>
+            </div>
+            <hr>
+            <div class='row'>
+                <div class='medium-centered medium-12 columns'>
+                    <p class="page_subtitle">Find out why thousands have successfully passed the CPA Exam with our CPA Review Course!</p>
+                </div>
+            </div>
+        </div>--%>
+        <!--START OF TUITION BLURB-->
+        <div id='cpa-individual-course'>
+            <div class="row customWidthContainer">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <%--<div id='cpa-listing'>
+          <div class='row'>
+          <div class="columns medium-12">
+
+            <div id="listing-nav" class='columns medium-3'>
+                  <h3>About the Course</h3>
+                  <ul class="dtabs vertical">
+                      <a href="/cpa_course_features.html"><li><h4>Course Features</h4></li></a>
+                      <a href="#"><li><h4>CPA Exam Pass Rates</h4></li></a>
+                      <a href="#" class="active"><li><h4>Instructors</h4></li></a>
+                      <a href="#"><li><h4>Testimonials</h4></li></a>
+                      <a href="#"><li><h4>How the Exam Works</h4></li></a>
+                  </ul>
+            </div>
+            <div id="listing-details" class='columns medium-9'>
+                  <ul id='instructors-tab' class="tab active">
+                      <div id="instructors-blurb" class='row'>
+                        <div class='columns medium-12'>
+                          <h1>Instructors that Make the Difference</h1>
+                          <p class='intro-style'>Our instructors are both highly experienced and engaging, creating a learning environment suitable for everyone. Our commitment is to make the difficult topics easy to understand
+                          while creating an enjoyable, memorable educational experience. And they’re always there for support—if you have a question during your CPA Review course, you can contact them directly!</p>                        
+                        </div>
+                      </div>
+                      <div class='row'>
+                        <div class="columns medium-4">
+                          <img class="bpad-20-mobile"  src="assets/images/surgent-cpa-review-instructor-jack-surgent.jpg">
+                        </div>
+                        <div class="columns medium-7 pull-1">
+                          <h2>John M. Surgent</h2>
+                          <p>John M. Surgent, CPA, is CEO of Surgent Professional Education. His company is the largest provider of tax and financial-planning seminars to CPAs in the United States.
+                          </p>
+                          <p>
+                            Mr. Surgent has personally presented over 1,800 live seminars in the past 25 years and has been named Outstanding Discussion Leader by various professional organizations. His down-to- earth, practical approach clearly emphasizes ways in which professionals can satisfy their clients’ needs and maximize
+  their incomes. Mr. Surgent also manages a 30-person CPA firm specializing in taxation and financial planning for high-net-worth individuals and closely held businesses.
+                          </p>
+                          <p>
+                            Mr. Surgent has worked in the tax department of a Big Four accounting firm and was an assistant professor at St. Joseph’s University in Philadelphia. He received his bachelor’s degree in accounting from Villanova University and a master’s in taxation from Villanova University School of Law.
+                          </p>
+                          <a href="#" class="arrow-right course-link">Watch a Video Sample</a>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class='row'>
+                        <div class="columns medium-4">
+                          <img class="bpad-20-mobile" src="assets/images/surgent-cpa-review-instructor-liz-kolar.jpg">
+                        </div>
+                        <div class="columns medium-7 pull-1">
+                          <h2>Liz Kolar</h2>
+                          <p>Liz has been teaching CPA Review for more than 20 years
+                              in Pennsylvania, New Jersey and New York and has helped thousands of candidates pass the CPA Exam. She is a recipient of the ASWA Business Woman of the Year Northeast Region, Distinguished Faculty Member of the Year, and PICPA Outstanding Educator of the Year. Liz began her career in Public Accounting with Coopers & Lybrand after graduating from Pace University with an MBA in accounting. Liz has also taught full- time at Pace University, Seton Hall University and Delaware Valley College.  
+                          </p>
+                          <a href="#" class="arrow-right course-link">Watch a Video Sample</a>
+                        </div>
+                      </div>
+                  </ul>
+              </div>
+
+
+
+              </div>
+          </div>
+      </div>--%>
+        <asp:ContentPlaceHolder ID="footerBlock" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+
+    <script src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/modernizr/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://api.html5media.info/1.1.6/html5media.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/foundation/js/foundation.min.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/slick.min.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/jquery-hoverIntent/jquery.hoverIntent.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/functions.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,242 @@
+﻿<%@ Master Language="C#" %>
+<%@ Register Src="~/Custom/Surgent/CPAReviewControls/CPAReviewThemeNavigation.ascx" TagPrefix="uc1" TagName="CPAReviewThemeNavigation" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head id="Head1" runat="server">
+      <title>Surgent | CPA Review</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      <script src="//use.typekit.net/cem5eox.js"></script>
+    <script>try { Typekit.load(); } catch (e) { }</script>
+      <link rel="stylesheet" type="text/css" href="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/Global/styles.css">
+      <%--<link rel="stylesheet" type="text/css" href="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/Global/slick.css"/>--%>
+      <link href="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/Global/Site.css" rel="stylesheet" type="text/css" />
+      <link type="text/css" href="/packages/PagedList.Mvc.3.18.0.0/Content/Content/PagedList.css" rel="stylesheet" />
+      <script src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/modernizr/modernizr.js"></script>
+      <!--[if lt IE 9]>
+        <link type="text/css" rel="stylesheet" href="/assets/css/ie.css" />
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+  </head>
+
+  <body class='microsite'>
+        <!-- Google Tag Manager NoScript-->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WF5VGC"
+            height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager NoScript-->
+    <script type="text/javascript">
+        /* Google Tag Manager */
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WF5VGC');
+        /*End Google Tag Manager*/
+    </script>
+      <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" />
+    <div id="header-wrap" >
+        <div id="header-top" class=''>
+          <div class='row'>
+            <div class='columns medium-6 hide-for-small'>
+                <span class="number hide-for-small">Customer Service: <b><a href="tel:8007787436">800-778-7436</a></b> &nbsp;&nbsp;&nbsp;&nbsp;<a class="contactLink" href="/cpareview/cpa-contact-us">Contact</a></span>
+                <%--<asp:ContentPlaceHolder ID="search" runat="server">
+                                </asp:ContentPlaceHolder>--%>
+              <%--<input type='text' value='Search' class='search' onFocus="if (this.value=='Search'){this.value='';}"
+onBlur="if (this.value==''){this.value='Search';}"/>--%>
+            </div>
+            <div class='columns medium-5 hide-for-small'>
+              <%--<span class='number'>Customer Service: <b>888-123-4567</b></span>--%>
+            </div>
+            <div class='columns medium-4'>
+              <div class='usernav'>
+                 <ul>
+                    <%--<li><a class='cart' href=''>0</a></li>
+                    <li><a class='name md-trigger' href='#' data-modal="sign-in">Sign In</a></li>--%>
+                     <asp:ContentPlaceHolder ID="userAccount" runat="server">
+                                </asp:ContentPlaceHolder>
+                  </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <nav class="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+              <li class="name">
+                <a href="/cpareview"><img class='logo' src='/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/images/surgent-cpa-review-logo-@2x.png' ></a>
+                <h1></h1>
+              </li>
+
+              <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            </ul>
+            <uc1:CPAReviewThemeNavigation runat="server" id="CPAReviewThemeNavigation" />
+            
+          </nav>
+
+
+        </div>
+<!-- END OF HEADER --><!--START OF TOPLEVEL HERO-->
+          <asp:ContentPlaceHolder ID="heroPlaceholder" runat="server">
+                                </asp:ContentPlaceHolder>
+        <%--<div id='cpa-review-course-header'>
+            <div class='row'>
+                <div class='medium-centered medium-6 columns'>
+                    <h1>Becoming a CPA</h1>
+                </div>
+            </div>
+            <hr>
+            <div class='row'>
+                <div class='medium-centered medium-12 columns'>
+                    <p class="page_subtitle">Find out why thousands have successfully passed the CPA Exam with our CPA Review Course!</p>
+                </div>
+            </div>
+        </div>--%>
+        <!--START OF TUITION BLURB-->
+          <div id = 'cpa-individual-course' style="padding-top:20px;">
+          <div class="row customWidthContainer" style="padding:10px;">
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+              </div>
+              </div>
+        <%--<div id='cpa-listing'>
+          <div class='row'>
+            <div id="listing-nav" class='columns medium-3'>
+                  <h3>Becoming a CPA</h3>
+                  <ul class="dtabs vertical">
+                      <a href="#"  class="active"><li><h4>CPA Requirements</h4></li></a>
+                      <a href="#"><li><h4>CPA Exam Pass Rates</h4></li></a>
+                      <a href="/cpa_prepare.html"><li><h4>How To Prepare</h4></li></a>
+                  </ul>
+            </div>
+            <div id="listing-details" class='columns medium-8 pull-1'>
+                  <ul id='cpa-requirements-tab' class="tab active">
+                      <div class="row">
+                        <div class="columns medium-12">
+                          <h1>CPA Requirements</h1>
+                          <p class='intro-style'>While requirements vary from state to state, most fall within the following guidelines:</p>
+                          <ul>
+                            <li><p>You must have BA degree with a minimum of 24 hours of accounting classes and at least 18 hours of related business courses.</p></li>
+                            <li><p>Take and pass all four sections of the CPA examination.</p></li>
+                            <li><p>Take and pass the American Institute of CPAs (AICPA) professional ethics exam with a score of 90%.</p></li>
+                            <li><p>Send letters of recommendation (on average 5) to your State Board of Accountancy. Two of these letters must be from CPAs.</p></li>
+                            <li><p>Submit college transcripts showing completion of 150 credit hours, including at least 30 in accounting.</p></li>
+                            <li><p>Provide a work history for up to 10 years.</p></li>
+                            <li><p>Provide certification of experience for jobs as a CPA. Check with your State Board of Accountancy for exact requirements.</p></li>
+                            <li><p>Submit the application, fees and a passport-type photo to your State Board of Accountancy.</p></li>
+                          </ul>
+                          <br>
+                          <p>
+                          Although these are commonly required in becoming a licensed CPA, there may be other requirements specific to your state. We encourage you to find and carefully read through them. You can find these requirements on the NASBA website. Start by selecting your state below.
+                          </p>
+                          <h2>Find Your State's CPA Requirements</h2>
+                          <div id="jump-to-nav">
+                            <ul>
+                              <p>Jump to:</p>
+                              <li><p><a href="#a">A</a></p></li>
+                              <li><p><a href="#c">C</a></p></li>
+                              <li><p><a href="#d">D</a></p></li>
+                              <li><p><a href="#f">F</a></p></li>
+                              <li><p><a href="#g">G</a></p></li>
+                              <li><p><a href="#h">H</a></p></li>
+                              <li><p><a href="#i">I</a></p></li>
+                              <li><p><a href="#k">K</a></p></li>
+                              <li><p><a href="#l">L</a></p></li>
+                              <li><p><a href="#m">M</a></p></li>
+                              <li><p><a href="#n">N</a></p></li>
+                              <li><p><a href="#o">O</a></p></li>
+                              <li><p><a href="#p">P</a></p></li>
+                              <li><p><a href="#r">R</a></p></li>
+                              <li><p><a href="#s">S</a></p></li>
+                              <li><p><a href="#t">T</a></p></li>
+                              <li><p><a href="#u">U</a></p></li>
+                              <li><p><a href="#v">V</a></p></li>
+                              <li><p><a href="#w">W</a></p></li>
+                            </ul>
+                          </div>
+                          <ul id="jump-to-list">
+                            <li id="a"><h3><a href="#">Alabama</a></h3></li>
+                            <li id=""><h3><a href="##">Alaska</a></h3></li>
+                            <li id="Li1"><h3><a href="#">Arkansas</a></h3></li>
+                            <li id="c"><h3><a href="#">California</a></h3></li>
+                            <li id="Li2"><h3><a href="#">Colorado</a></h3></li>
+                            <li id="Li3"><h3><a href="#">Connecticut</a></h3></li>
+                            <li id="d"><h3><a href="#">Delaware</a></h3></li>
+                            <li id="f"><h3><a href="#">Florida</a></h3></li>
+                            <li id="g"><h3><a href="#">Georgia</a></h3></li>
+                            <li id="h"><h3><a href="#">Hawaii</a></h3></li>
+
+                            <li id="i"><h3><a href="#">Idaho</a></h3></li>
+                            <li id="Li4"><h3><a href="#">Illinois</a></h3></li>
+                            <li id="Li5"><h3><a href="#">Indiana</a></h3></li>
+                            <li id="Li6"><h3><a href="#">Iowa</a></h3></li>
+                            <li id="k"><h3><a href="#">Kansas</a></h3></li>
+                            <li id="Li7"><h3><a href="#">Kentucky</a></h3></li>
+                            <li id="l"><h3><a href="#">Louisiana</a></h3></li>
+                            <li id="m"><h3><a href="#">Maine</a></h3></li>
+                            <li id="Li8"><h3><a href="#">Maryland</a></h3></li>
+                            <li id="Li9"><h3><a href="#">Massachusetts</a></h3></li>
+
+                            <li id="Li10"><h3><a href="#">Michigan</a></h3></li>
+                            <li id="Li11"><h3><a href="#">Minnesota</a></h3></li>
+                            <li id="Li12"><h3><a href="#">Mississippi</a></h3></li>
+                            <li id="Li13"><h3><a href="#">Missouri</a></h3></li>
+                            <li id="Li14"><h3><a href="#">Montana</a></h3></li>
+                            <li id="n"><h3><a href="#">Nebraska</a></h3></li>
+                            <li id="Li15"><h3><a href="#">Nevada</a></h3></li>
+                            <li id="Li16"><h3><a href="#">New Hampshire</a></h3></li>
+                            <li id="Li17"><h3><a href="#">New Jersey</a></h3></li>
+                            <li id="Li18"><h3><a href="#">New Mexico</a></h3></li>
+
+                            <li id="Li19"><h3><a href="#">North Carolina</a></h3></li>
+                            <li id="Li20"><h3><a href="#">North Dakota</a></h3></li>
+                            <li id="o"><h3><a href="#">Ohio</a></h3></li>
+                            <li id="Li21"><h3><a href="#">Oklahoma</a></h3></li>
+                            <li id="Li22"><h3><a href="#">Oregon</a></h3></li>
+                            <li id="p"><h3><a href="#">Pennsylvania</a></h3></li>
+                            <li id="r"><h3><a href="#">Rhode Island</a></h3></li>
+                            <li id="s"><h3><a href="#">South Carolina</a></h3></li>
+                            <li id="Li23"><h3><a href="#">South Dakota</a></h3></li>
+                            <li id="t"><h3><a href="#">Tennessee</a></h3></li>
+
+                            <li id="Li24"><h3><a href="#">Texas</a></h3></li>
+                            <li id="u"><h3><a href="#">Utah</a></h3></li>
+                            <li id="v"><h3><a href="#">Vermont</a></h3></li>
+                            <li id="Li25"><h3><a href="#">Virginia</a></h3></li>
+                            <li id="w"><h3><a href="#">Washington</a></h3></li>
+                            <li id="Li26"><h3><a href="#">West Virginia</a></h3></li>
+                            <li id="Li27"><h3><a href="#">Wisconsin</a></h3></li>
+                            <li id="Li28"><h3><a href="#">Wyoming</a></h3></li>
+                          </ul>
+                          
+                        </div>
+                      </div>
+                  </ul>
+              </div>
+          </div>
+      </div>--%>
+          <asp:ContentPlaceHolder ID="footerBlock" runat="server">
+            </asp:ContentPlaceHolder>
+          </form>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://api.html5media.info/1.1.6/html5media.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/foundation/js/foundation.min.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/slick.min.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/jquery-hoverIntent/jquery.hoverIntent.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/CPAReviewTheme/js/functions.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    
+
+</body>
+</html>
+

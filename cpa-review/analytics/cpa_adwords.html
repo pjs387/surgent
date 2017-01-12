@@ -1,0 +1,43 @@
+<script>
+
+var s = parseInt($('.sfPrice').text().replace(/[$,]/gi, '').trim());
+
+$("#total").html(s);
+
+var n = $('#ContentBlock2_C001_lbl_OrderNumber').text();
+
+var sc = "//www.googleadservices.com/pagead/conversion/927712359/?currency_code=USD&value=" + s + "&order_id=" + n + "&label=RqqoCKyZ0FoQhe292wM&guid=ON&script=0";
+
+$(".imgcontainer").prop('src', sc);
+
+//<!-- Google Code for Completed Transaction Conversion Page -->
+
+/* <![CDATA[ */
+
+var google_conversion_id = 927712359;
+
+var google_conversion_language = "en";
+
+var google_conversion_format = "3";
+
+var google_conversion_color = "ffffff";
+
+var google_conversion_label = "RqqoCKyZ0FoQhe292wM";
+
+var google_conversion_value = s;
+
+var google_conversion_currency = "USD";
+
+var google_remarketing_only = false;
+
+/* ]]> */
+
+</script>
+
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+
+</script>
+
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"4055764"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+
+<script>window.uetq = window.uetq || [];  window.uetq.push({ 'gv': s }); </script>

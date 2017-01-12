@@ -1,0 +1,20 @@
+<script type="text/javascript">
+  var uts_coupon = '';
+  var uts_discount = '';
+  var uts_currency = 'USD';
+  var uts_orderid = $('[id*="_OrderNumber"]').html().trim();
+
+  if (jQuery('#ctl00_ContentPlaceHolder1_C006_productsInOrderGridView_ctl00_ctl04_Literal1').text() == "$49.00") {
+
+    var uts_eventid = '3916';
+    var uts_saleamount = 149;
+
+  } else {
+
+    var uts_eventid = '3872';
+    var uts_saleamount = $(".sfPrice").html().replace("$", "").trim();
+
+  }
+
+</script>
+<script type="text/javascript" src="http://www.linkconnector.com/uts_tm.php?cgid=900563"></script>
