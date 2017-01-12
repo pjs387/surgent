@@ -1,0 +1,40 @@
+<script>
+  switch (window.location.pathname) {
+
+    case '/webinars':
+    case '/self-study':
+    case '/cpe-packages':
+
+      $('a:contains(Buy now)').on('click', function() {
+        ga('send', 'event', 'Global', 'click', 'Buy Now from Product List');
+      });
+
+      $('a:contains(Buy Now)').on('click', function() {
+        ga('send', 'event', 'Global', 'click', 'Buy Now from Product List');
+      });
+
+      $('a:contains(BUY NOW)').on('click', function() {
+        ga('send', 'event', 'Global', 'click', 'Buy Now from Product List');
+      });
+
+      break;
+
+    case '/search-results':
+
+      $('a:contains(Buy now)').on('click', function() {
+        ga('send', 'event', 'Global', 'click', 'Buy Now from Search Results');
+      });
+
+      $('a:contains(Buy Now)').on('click', function() {
+        ga('send', 'event', 'Global', 'click', 'Buy Now from Search Results');
+      });
+
+      $('a:contains(BUY NOW)').on('click', function() {
+        ga('send', 'event', 'Global', 'click', 'Buy Now from Search Results');
+      });
+
+      break;
+
+  }
+
+</script>

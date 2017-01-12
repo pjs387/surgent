@@ -1,0 +1,118 @@
+<script>
+  (function($) {
+
+    $(function() {
+
+      // Trinity Event Tracking
+
+      $('.name md-trigger').on('click', function() {
+        ga('send', 'event', 'Global', 'click', 'Open Login Modal');
+      });
+
+      $('#ContentBlock3_C028_Button1').on('click', function() {
+        ga('send', 'event', 'Global', 'click', 'Open Email Sign Up Modal');
+      });
+
+      $('a:contains(Buy now)').on('click', function() {
+        ga('send', 'event', 'Global', 'click', 'Open Quantity Modal');
+      });
+
+      $('a:contains(Buy Now)').on('click', function() {
+        ga('send', 'event', 'Global', 'click', 'Open Quantity Modal');
+      });
+
+      $('a:contains(BUY NOW)').on('click', function() {
+        ga('send', 'event', 'Global', 'click', 'Open Quantity Modal');
+      });
+
+      $('a:contains(Add To Cart)').on('click', function() {
+        ga('send', 'event', 'Global', 'click', 'Add To Cart');
+      });
+
+      $('a:contains(ADD TO CART)').on('click', function() {
+        ga('send', 'event', 'Global', 'click', 'Add To Cart');
+      });
+
+      $('[data-modal="registerwebinarpackage"]').on('click', function() {
+        ga('send', 'event', 'Global', 'click', 'Open Attendee Modal');
+      });
+
+      $('a:contains("GO BACK")').on('click', function() {
+        ga('send', 'event', 'Global', 'click', 'Open Continue Shopping Modal');
+      });
+
+      $('a:contains("Forgot Password")').on('click', function() {
+        ga('send', 'event', 'My Account', 'click', 'Open Change Password Modal');
+      });
+
+      $('#ContentBlock2_C022_btn_Search').on('click', function() {
+        ga('send', 'event', 'Course Filter', 'click', 'Course Filter - Completed (Webinar)');
+      });
+      
+      $('#ContentBlock2_C024_btn_Search').on('click', function() {
+        ga('send', 'event', 'Course Filter', 'click', 'Course Filter - Completed (Self Study)');
+      });
+
+      switch (window.location.pathname) {
+
+        case '/my-profile':
+
+          $('#thankyou').on('click', function() {
+            ga('send', 'event', 'My Account', 'click', 'Open Email Sign Up Success Modal');
+          });
+
+          break;
+
+        case '/live-training':
+
+          $('#contact-slider').on('click', function() {
+            ga('send', 'event', 'Live Training', 'click', 'Open On-Site Form');
+          });
+
+          $('#sendButton').on('click', function() {
+            ga('send', 'event', 'Live Training', 'submit', 'Submit On-Site Form');
+          });
+
+          $('.listitem .tab-style').on('click', function() {
+            ga('send', 'event', 'Live Training', 'click', 'Click on Information Tab');
+          });
+
+          $('#saveButton').on('click', function() {
+            ga('send', 'event', 'Live Training', 'submit', 'Submit Public Seminars Form');
+          });
+          break;
+
+        case '/contact-us':
+
+          $('[value="SEND"]').on('click', function() {
+            ga('send', 'event', 'Contact Us', 'submit', 'Submit Form');
+          });
+
+          break;
+
+        case '/shopping-cart':
+
+          $('[name="ctl00$ContentBlock1$C001$ctl00$ctl00$discountCodeBtn"]').on('click', function() {
+            ga('send', 'event', 'Cart', 'click', 'Apply Discount Code');
+          });
+
+          $('a:contains("Clear Cart")').on('click', function() {
+            ga('send', 'event', 'Cart', 'click', 'Clear Cart');
+          });
+
+          $('.delete-img').on('click', function() {
+            ga('send', 'event', 'Cart', 'click', 'Remove Product from Cart');
+          });
+
+          $('a:contains("Keep Shopping")').on('click', function() {
+            ga('send', 'event', 'Cart', 'click', 'Keep Shopping');
+          });
+          break;
+
+      }
+
+    });
+
+  }(jQuery));
+
+</script>

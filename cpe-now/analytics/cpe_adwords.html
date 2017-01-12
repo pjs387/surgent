@@ -1,0 +1,41 @@
+<script>
+
+var s = parseInt($('.sfPrice').text().replace(/[$,]/gi, '').trim());
+
+$("#total").html(s);
+
+var n = $('#ContentBlock2_C001_lbl_OrderNumber').text();
+
+var sc = "//www.googleadservices.com/pagead/conversion/997160581/?currency_code=USD&value=" + s + "&order_id=" + n + "&label=RqqoCKyZ0FoQhe292wM&guid=ON&script=0";
+
+$(".imgcontainer").prop('src', sc);
+
+//<!-- Google Code for Completed Transaction Conversion Page -->
+
+/* <![CDATA[ */
+
+var google_conversion_id = 997160581;
+
+var google_conversion_language = "en";
+
+var google_conversion_format = "3";
+
+var google_conversion_color = "ffffff";
+
+var google_conversion_label = "RqqoCKyZ0FoQhe292wM";
+
+var google_conversion_order_id = n;
+
+var google_conversion_value = s;
+
+var google_conversion_currency = "USD";
+
+var google_remarketing_only = false;
+
+/* ]]> */
+
+</script>
+
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+
+</script>

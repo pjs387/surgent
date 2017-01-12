@@ -1,0 +1,119 @@
+<script type='text\/javascript'>
+$(document).ready(function () {
+    var existingForm = $('form').first();
+    var popup = generatePopup();
+    existingForm.append(popup);
+    var button = generateFloatingButton();
+    existingForm.append(button);
+    var confirmationPopup = generateConfirmationPopup();
+    existingForm.append(confirmationPopup);
+});
+
+function generatePopup() {
+    var customPopup = '<div> '+
+'<div class="md-modal md-effect-1" id="customPopup">' +
+'<div class="row md-content"><a class="md-close" onclick="closeCustomPopup();" title="">'+
+'<img src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/Images/cpe-webinars-x@2x.png" class="hoverImg close"></a><div class="columns medium-10 medium-centered ">'+
+'<div class="row"><h3 class="columns small-12 text-center" style="padding-bottom:15px">Fill out the short form below and receive 3 days of full access to Surgent EA Review</h3><div id="trialContactForm">'+
+'<input value="EA" id="ProductTextBox" name="ProductTextBox" type="text" style="display:none;" /><div class="columns small-6 pad-right"><label>First Name<span style="color:red">*</span>'+
+'<input id="FirstNameTextBox" name="FirstNameTextBox" type="text" ></label></div><div class="columns small-6"><label>Last Name<span style="color:red">*</span>'+
+'<input id="LastNameTextBox" name="LastNameTextBox" type="text" ></label></div><div class=""><div class="columns small-12"><label>Email Address<span style="color:red">*</span>'+
+'<input id="EmailTextBox" name="EmailTextBox" type="text" ></label></div></div><div class=""><div class="columns small-12"><label>Phone Number<span style="color:red">*</span>'+
+'<input id="PhoneTextBox" name="PhoneTextBox" onkeypress="return isNumberKey(event);" type="text" ></label></div></div></div></div>'+
+'<label id="reqerror" class="hide" style="color:red;">Missing Required Fields</label><label id="emailerror" class="hide" style="color:red;">Incorrect Email Format</label>'+
+'<div class="center" style="padding-top:15px"><a class="button" id="SubmitButton" name="SubmitButton" onclick="submitTrialForm();"  value="">Get Started</a></div></div></div></div><div class="md-overlay"></div></div>';
+
+    return customPopup;
+}
+
+function generateFloatingButton() {
+    var floatingButton = '<div><a onclick="showCustomPopup();" style="font-size: 11px !important;line-height: 1.2 !important;position: fixed !important;_position: absolute !important;top: 22% !important;right: 0 !important;"><img src="https://www.cpenow.com/images/default-source/default-album/startfreetrialr.png?Status=Temp&sfvrsn=2" width="65"/></a></div>';
+
+    return floatingButton;
+}
+
+function generateConfirmationPopup()
+{
+    var customconfirm = '<div><div class="md-modal md-effect-1" id="customConfirmationPopup"><div class="row md-content"><a class="md-close" onclick="closeConfirmationPopup();" title="">'+
+'<img src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/Images/cpe-webinars-x@2x.png" class="hoverImg close"></a><div class="columns medium-10 medium-centered ">'+
+'<div class="row"><h3>Thank you for signing up for a 3-day trial of Surgent EA Review. Access information has been sent to the email address you provided.</h3>'+
+'</div></div></div></div><div class="md-overlay"></div></div>';
+
+    return customconfirm;
+
+}
+
+function showCustomPopup() {
+    $('#customPopup').addClass('md-show');
+}
+
+function closeCustomPopup() {
+    $('#customPopup').removeClass('md-show');
+}
+function showConfirmationPopup()
+{
+    $('#customConfirmationPopup').addClass('md-show');
+}
+function closeConfirmationPopup() {
+    $('#customConfirmationPopup').removeClass('md-show');
+    window.location.reload(false);
+}
+
+function submitTrialForm() {
+    if ($('#FirstNameTextBox').val() == '' || $('#LastNameTextBox').val() == '' || $('#EmailTextBox').val() == '' || $('#PhoneTextBox').val() == '') {
+        $('#reqerror').removeClass('hide');
+    }
+    else {
+        $('#reqerror').addClass('hide');
+        if (!isValidEmail('EmailTextBox')) {
+            $('#emailerror').removeClass('hide');
+        }
+        else {
+            $('#emailerror').addClass('hide');
+            //form submit stuff goes in here
+            var iframe = document.createElement("iframe");
+            var uniqueString = "trialFormSubmitHiddenIframe";
+            document.body.appendChild(iframe);
+            iframe.style.display = "none";
+            iframe.contentWindow.name = uniqueString;
+
+            var newForm = document.createElement("form");
+            newForm.action = 'http://review.surgent.com/Pass/TrialSignup.aspx';            
+            newForm.target = uniqueString;
+            newForm.id = 'TrialSignupForm';
+            newForm.method = 'post';
+            var test = $('#trialContactForm');
+            test.appendTo(newForm);
+            newForm.style.display = "none";
+            document.body.appendChild(newForm);
+            newForm.submit();
+            
+            ga('send', 'event', 'Submit', 'On Click', 'EA Review Free Trial');
+            
+            window.uetq = window.uetq || []; window.uetq.push({ 'ec': 'Submit', 'ea': 'On Click', 'el': 'EA Review Free Trial', 'ev': 0 });
+            
+            closeCustomPopup();
+            showConfirmationPopup();
+        }
+
+    }
+
+}
+
+
+function isValidEmail(elementId) {
+    var emailRegex = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    
+    if (emailRegex.test($('#' + elementId).val())) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : evt.keyCode
+    return !(charCode > 31 && (charCode < 48 || charCode > 57));
+}
+</script>

@@ -1,0 +1,73 @@
+<script>
+  switch (window.location.pathname) {
+
+    case '/shopping-cart':
+
+      ga('ec:setAction', 'checkout', {
+        'step': 1
+      });
+
+      ga("send", "event", "e-Commerce", "click", "Checkout Steps", {nonInteraction: true})
+
+      break;
+
+    case '/CheckOutLogin':
+
+      ga('ec:setAction', 'checkout', {
+        'step': 2
+      });
+
+      ga("send", "event", "e-Commerce", "click", "Checkout Steps", {nonInteraction: true})
+
+      break;
+
+    case '/Webinar-Registration':
+
+      ga('ec:setAction', 'checkout', {
+        'step': 3
+      });
+
+      ga("send", "event", "e-Commerce", "click", "Checkout Steps", {nonInteraction: true})
+
+      break;
+
+    case '/checkout':
+    case '/CheckOut':
+
+      if ($('.sfcheckoutStepTitle').first().text().trim() == "Shipping address") {
+        ga('ec:setAction', 'checkout', {
+          'step': 4
+        });
+
+        ga("send", "event", "e-Commerce", "click", "Checkout Steps", {nonInteraction: true})
+      } else if ($('.sfcheckoutStepTitle').text().trim() == "Billing address") {
+        ga('ec:setAction', 'checkout', {
+          'step': 4
+        });
+
+        ga("send", "event", "e-Commerce", "click", "Checkout Steps", {nonInteraction: true})
+      } else if ($('.sfcheckoutStepTitle').text().trim() == "Shipping options") {
+        ga('ec:setAction', 'checkout', {
+          'step': 5
+        });
+
+        ga("send", "event", "e-Commerce", "click", "Checkout Steps", {nonInteraction: true})
+      } else if ($('.sfcheckoutStepTitle').text().trim() == "Payment options") {
+        ga('ec:setAction', 'checkout', {
+          'step': 6
+        });
+
+        ga("send", "event", "e-Commerce", "click", "Checkout Steps", {nonInteraction: true})
+      } else if ($('.sfcheckoutStepTitle').last().text().replace(':', '').trim() == "Payment method") {
+        ga('ec:setAction', 'checkout', {
+          'step': 7
+        });
+
+        ga("send", "event", "e-Commerce", "click", "Checkout Steps", {nonInteraction: true})
+      }
+
+      break;
+
+  }
+
+</script>

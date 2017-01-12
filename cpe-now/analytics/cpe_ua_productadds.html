@@ -1,0 +1,87 @@
+<script>
+  switch (window.location.pathname) {
+
+    case '/cpe-packages/unlimited-plus-package':
+
+      $('a:contains("BUY NOW")').on('click', function() {
+        ga('ec:addProduct', {
+          'id': 'UNPS-2016-01-SSDL',
+          'name': 'Unlimited Plus - Self-Study',
+          'category': 'Self-Study',
+          'brand': 'CPE Now',
+          'variant': '2016',
+          'price': 324.00,
+          'quantity': 1
+        });
+        ga('ec:addProduct', {
+          'id': 'UNPW-2016-01-WEBNR',
+          'name': 'Unlimited Plus - Webinars',
+          'category': 'Webinar',
+          'brand': 'CPE Now',
+          'variant': '2016',
+          'price': 425.00,
+          'quantity': 1
+        });        
+        ga('ec:setAction', 'add');
+        ga('send', 'event', 'e-Commerce', 'click', 'Product Add To Cart');
+      });
+
+      break;
+
+    case '/cpe-packages/unlimited-webinar-package':
+
+      $('a:contains("BUY NOW")').on('click', function() {
+        ga('ec:addProduct', {
+          'id': 'UNLM-2016-01-WEBNR',
+          'name': 'Unlimited Plus - Webinars',
+          'category': 'Webinar',
+          'brand': 'CPE Now',
+          'variant': '2016',
+          'price': 649.00,
+          'quantity': 1
+        });        
+        ga('ec:setAction', 'add');
+        ga('send', 'event', 'e-Commerce', 'click', 'Product Add To Cart');
+      });
+
+      break;
+
+    case '/cpe-packages/self-study-cpe-library':
+
+      $('a:contains("BUY NOW")').on('click', function() {
+        ga('ec:addProduct', {
+          'id': 'LIBR-2016-01-SSDL',
+          'name': 'Self-Study Library Package',
+          'category': 'Self-Study',
+          'brand': 'CPE Now',
+          'variant': '2016',
+          'price': 499.00,
+          'quantity': 1
+        });        
+        ga('ec:setAction', 'add');
+        ga('send', 'event', 'e-Commerce', 'click', 'Product Add To Cart');
+      });
+
+      break;
+
+      case '/cpe-packages/16-credit-webinar-package':
+
+      $('a:contains("BUY NOW")').on('click', function() {
+        ga('ec:addProduct', {
+          'id': 'WB16-2016-01-WEBNR',
+          'name': '16-Credit Webinar Package',
+          'category': 'Webinar',
+          'brand': 'CPE Now',
+          'variant': '2016',
+          'price': 399.00,
+          'quantity': 1
+        });        
+        ga('ec:setAction', 'add');
+        ga('send', 'event', 'e-Commerce', 'click', 'Product Add To Cart');
+      });
+
+      break;
+
+  }
+
+</script>

@@ -1,0 +1,62 @@
+<script>
+  (function($) {
+
+    $(function() {
+
+      switch (window.location.pathname) {
+
+        case '/cpe-packages/self-study-cpe-library':
+
+	      $('#ContentBlock2_C011_upsellAddToCart').on('click', function() {
+	        ga('send', 'event', 'Upsell - Package Details - LIBR to UNPL', 'click', 'Add Upsell To Cart');
+	      });
+
+	      $('#upsellNotInterestedBtn').on('click', function() {
+	        ga('send', 'event', 'Upsell - Package Details - LIBR to UNPL', 'click', 'Dismiss Upsell');
+	      });
+
+          break;
+
+        case '/cpe-packages/unlimited-webinar-package':
+
+	      $('#ctl00$ContentBlock2$C009$upsellAddToCart').on('click', function() {
+	        ga('send', 'event', 'Upsell - Package Details - UNLM to UNPL', 'click', 'Add Upsell To Cart');
+	      });
+
+	      $('#upsellNotInterestedBtn').on('click', function() {
+	        ga('send', 'event', 'Upsell - Package Details - UNLM to UNPL', 'click', 'Dismiss Upsell');
+	      });
+
+          break;
+
+        case '/webinars':
+
+	      $('#upsellContent a:contains("Add To Cart")').on('click', function() {
+	        ga('send', 'event', 'Upsell - Search (Old) - Webinar to UNLM', 'click', 'Add Upsell To Cart');
+	      });
+
+	      $('#upsellAddToCart .close').on('click', function() {
+	        ga('send', 'event', 'Upsell - Search (Old) - UNLM to UNPL', 'click', 'Dismiss Upsell');
+	      });
+
+          break;
+
+        case '/self-study':
+
+	      $('#upsellContent a:contains("Add To Cart")').on('click', function() {
+	        ga('send', 'event', 'Upsell - Search (Old) - Self-Study to LIBR', 'click', 'Add Upsell To Cart');
+	      });
+
+	      $('#upsellAddToCart .close').on('click', function() {
+	        ga('send', 'event', 'Upsell - Search (Old) - Self-Study to LIBR', 'click', 'Dismiss Upsell');
+	      });
+
+          break;
+
+      }
+
+    });
+
+  }(jQuery));
+
+</script>

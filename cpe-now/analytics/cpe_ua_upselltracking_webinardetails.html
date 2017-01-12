@@ -1,0 +1,18 @@
+<script>
+  (function($) {
+
+    $(function() {
+
+	      $('#upsellContent a:contains("Add To Cart")').on('click', function() {
+	        ga('send', 'event', 'Upsell - Product Details - Webinar to UNLM', 'click', 'Add Upsell To Cart');
+	      });
+
+	      $('#upsellAddToCart .close').on('click', function() {
+	        ga('send', 'event', 'Upsell - Product Details - Webinar to UNLM', 'click', 'Dismiss Upsell');
+	      });
+
+    });
+
+  }(jQuery));
+
+</script>

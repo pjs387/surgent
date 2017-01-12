@@ -1,0 +1,18 @@
+<script>
+  (function($) {
+
+    $(function() {
+
+	      $('#upsellContent a:contains("Add To Cart")').on('click', function() {
+	        ga('send', 'event', 'Upsell - Product Details - Self-Study to LIBR', 'click', 'Add Upsell To Cart');
+	      });
+
+	      $('#upsellAddToCart .close').on('click', function() {
+	        ga('send', 'event', 'Upsell - Product Details - Self-Study to LIBR', 'click', 'Dismiss Upsell');
+	      });
+
+    });
+
+  }(jQuery));
+
+</script>

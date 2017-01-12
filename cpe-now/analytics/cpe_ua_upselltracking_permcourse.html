@@ -1,0 +1,18 @@
+<script>
+  (function($) {
+
+    $(function() {
+
+	  $('#upsellContent a:contains("Add To Cart")').on('click', function() {
+        ga('send', 'event', 'Upsell - Perm Course', 'click', 'Add Upsell To Cart');
+      });
+
+      $('#upsellAddToCart .close').on('click', function() {
+        ga('send', 'event', 'Upsell - Perm Course', 'click', 'Dismiss Upsell');
+      });
+
+    });
+
+  }(jQuery));
+
+</script>

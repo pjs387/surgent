@@ -1,0 +1,191 @@
+<%@ Master Language="C#" %>
+
+<%@ Register Src="~/Custom/Surgent/RedesignThemeControls/RedesignNavigation.ascx" TagPrefix="uc1" TagName="RedesignNavigation" %>
+<%@ Register Assembly="Telerik.Sitefinity" Namespace="Telerik.Sitefinity.Web.UI" TagPrefix="sf" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+
+<head id="Head1" runat="server">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript">
+        !function (a) { var h, b = { kitId: "cem5eox", scriptTimeout: 3e3, async: !0 }, c = a.documentElement, d = setTimeout(function () { c.className = c.className.replace(/\bwf-loading\b/g, "") + " wf-inactive" }, b.scriptTimeout), e = a.createElement("script"), f = !1, g = a.getElementsByTagName("script")[0]; c.className += " wf-loading", e.src = "https://use.typekit.net/" + b.kitId + ".js", e.async = !0, e.onload = e.onreadystatechange = function () { if (h = this.readyState, !(f || h && "complete" != h && "loaded" != h)) { f = !0, clearTimeout(d); try { Typekit.load(b) } catch (a) { } } }, g.parentNode.insertBefore(e, g) }(document);
+    </script>
+    <link href="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/Global/style.css" rel="stylesheet" type="text/css" />
+    <link href="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/Global/Site.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" href="/Content/PagedList.css" rel="stylesheet" />
+
+    <link href="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/Global/tipso.min.css" rel="stylesheet" type="text/css" />
+    <%--<link href="~/Custom/Surgent/print.css" rel="stylesheet" type="text/css" media="print" />
+       <link href="~/Content/font-awesome.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>--%>
+<script type="text/javascript" src="//cdn.nextopia.net/v1.5.1/57f036e0693512271d12e95cac0b88c6.js" async></script>
+</head>
+<body class="mini-home">
+     <!-- Google Tag Manager NoScript-->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PVPBJG"
+            height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager NoScript-->
+    <script type="text/javascript">
+        /* Google Tag Manager */
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PVPBJG');
+        /*End Google Tag Manager*/
+    </script>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+
+    <div id="header-wrap" >
+        <div id="header-top" class="">
+          <div class="row">
+            <div class="columns medium-6">
+                <span class="number hide-for-small">Customer Service: <b><a href="tel:8007787436">800-778-7436</a></b> &nbsp;&nbsp;&nbsp;&nbsp;<a class="contactLink" href="/contact-us">Contact</a></span>
+                <asp:ContentPlaceHolder ID="search" runat="server">
+                                </asp:ContentPlaceHolder>
+              <%--<asp:ContentPlaceHolder ID="search" runat="server">
+                                </asp:ContentPlaceHolder>--%>
+                <%--<asp:ContentPlaceHolder ID="sfwelcome" runat="server">
+                                </asp:ContentPlaceHolder>--%>
+            </div>
+            <div class="columns medium-5">
+                <%--<asp:ContentPlaceHolder ID="phoneNumber" runat="server">
+                                </asp:ContentPlaceHolder>--%>
+              <%--<span class="number">Customer Service: <b><a href="tel:8007787436">800-778-7436</a></b></span>--%>
+            </div>
+            <div class="columns medium-4">
+              <div class="usernav">
+                 <ul class="top">
+                    <%--<li><a class="cart" href=''>0</a></li>
+                    <li><a class="access" href=''>Access CPE</a></li>
+                    <li><a class="name md-trigger" href='#' data-modal="sign-in">Sign In</a></li>--%>
+                     <asp:ContentPlaceHolder ID="userAccount" runat="server">
+                                </asp:ContentPlaceHolder>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <uc1:RedesignNavigation runat="server" id="RedesignNavigation" />
+     <%--   <div id="header-bottom" style="display:none">
+          <div class="row">
+              <div class='columns medium-3'>
+                <a href='/'><img class='logo' src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/Images/cpe-webinars-surgent-logo@2x.png"></a>
+              </div>
+              <div class='columns medium-9'>
+                <div class='topmenu' style="margin-right: 15px;">
+                  <ul>
+                    <li><a href="/vmenu/about-us">About</a></li>
+                    <li><a href="/tophmenu/blog">Blog</a></li>
+                    <li><a href="/contact-us">Contact</a></li>
+                  </ul>
+                </div>
+                <div class='bottommenu'>
+                    <asp:ContentPlaceHolder ID="navBar" runat="server">
+                                </asp:ContentPlaceHolder>
+                 
+                </div>
+              </div>
+              
+          </div>
+          
+        </div>--%>
+    </div>
+
+        
+
+
+        <div class="md-modal md-effect-1" id="sign-in">
+            <div class="row md-content">
+                <a class="md-close" href="#">
+                    <img src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/Images/cpe-webinars-x@2x.png" class="hoverImg close"></a>
+                <div class="columns medium-10 medium-centered ">
+
+                    <h2>Sign In to Your Surgent Account</h3>
+                
+                        <label>Username<input type="text" name="username"></label>
+                        <label>Password<input type="password" name="username"></label>
+                        <input type="submit" value="Sign In">
+
+
+                        <p><a href="#">Forgot Username or Password</a>  |  <a href="#">Register for an Account</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="md-overlay"></div>
+        <div id="subheader" class="hide-for-small">
+            <nav class="top-bar" data-topbar role="navigation">          
+          
+          
+                 <asp:ContentPlaceHolder ID="subNavContentBlock" runat="server">
+                                </asp:ContentPlaceHolder>
+               
+          </nav>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentBlock1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+        <div class="intro content">
+                <div class="row customWidthContainer">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+        </div>
+        <%--<div class="tabbed">
+            <div class="customWidthContainer">
+                <asp:ContentPlaceHolder ID="ContentBlock2" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>--%>
+
+        <div>
+            <div class="customWidthContainer">
+                <asp:ContentPlaceHolder ID="ContentBlock3" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="footerBlock" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+    <%--<script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/js/foundation/js/foundation.min.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/js/vendor/jquery.js"></script>
+    
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/js/functions.js"></script>
+     <script src="//use.typekit.net/cem5eox.js"></script>
+    <script>try { Typekit.load(); } catch (e) { }</script>--%>
+        <sf:ResourceLinks ID="MyResourceLinks" runat="server">
+            <sf:ResourceFile JavaScriptLibrary="JQuery" />
+</sf:ResourceLinks>
+
+    <script src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/js/modernizr/modernizr.js"></script>
+    <%--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>--%>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/js/jquery.cookie/jquery.cookie.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//api.html5media.info/1.1.6/html5media.min.js"></script>
+    <script src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/js/foundation/js/foundation.min.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/js/jquery-hoverIntent/jquery.hoverIntent.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/js/ActOn.js"></script>
+    <script src="/Scripts/bootstrap-datepicker.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/jquery-ui-1.10.4.min.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/js/responsive-tables.js"></script>
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/js/functions.js"></script>
+
+    
+     
+    <script type="text/javascript" src="/Sitefinity/WebsiteTemplates/SurgentWireframes/App_Themes/RedesignTheme/js/tipso.min.js"></script>
+</body>
+</html>
