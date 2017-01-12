@@ -1,0 +1,18 @@
+<script>
+ga('require', 'ec');
+// if {
+// 	var couponCode = ;
+// } else {
+// 	var couponCode = ;
+// }
+
+ga('ec:setAction', 'purchase', {
+	'id': jQuery('.order').find("strong").text(),
+	'affiliation': 'Best Value CPE',
+	'revenue': jQuery('.total').find("strong").text().replace(/[$,]/gi, ''),
+	'tax': '0',
+	'shipping': '0'
+	// 'coupon': couponCode
+});
+ga('send', 'event', 'EE - Checkout', 'click', 'Transaction');
+</script>

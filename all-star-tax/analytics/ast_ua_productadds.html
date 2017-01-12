@@ -1,0 +1,139 @@
+<script>
+  $('#addToCartBtn').on('click', function() {
+    if ($('#courseTitle').text() == "Season Pass") {
+      ga('ec:addProduct', {
+        'id': 'Season Pass',
+        'name': 'Season Pass',
+        'category': 'Broadcast',
+        'brand': 'All Star Tax',
+        'variant': '2016',
+        'price': 525.00,
+        'quantity': 1
+      });
+    }
+    if ($('#courseTitle').text() == "Everything You Need to Know About Real Estate Depreciation (REDE)") {
+      ga('ec:addProduct', {
+        'id': 'REDE-2016-01-BDCST',
+        'name': 'EVERYTHING YOU NEED TO KNOW ABOUT REAL ESTATE DEPRECIATION (REDE)',
+        'category': 'Broadcast',
+        'brand': 'All Star Tax',
+        'variant': '2016',
+        'price': 85.00,
+        'quantity': 1
+      });
+    }
+    if ($('#courseTitle').text() == "Real Estate Tax Roundup (RETR)") {
+      ga('ec:addProduct', {
+        'id': 'RETR-2016-01-BDCST',
+        'name': 'REAL ESTATE TAX ROUNDUP (RETR)',
+        'category': 'Broadcast',
+        'brand': 'All Star Tax',
+        'variant': '2016',
+        'price': 85.00,
+        'quantity': 1
+      });
+    }
+    if ($('#courseTitle').text() == "How to Settle an Estate from A to Z (ESTZ)") {
+      ga('ec:addProduct', {
+        'id': 'ESTZ-2016-01-BDCST',
+        'name': 'HOW TO SETTLE AN ESTATE FROM A TO Z (ESTZ)',
+        'category': 'Broadcast',
+        'brand': 'All Star Tax',
+        'variant': '2016',
+        'price': 85.00,
+        'quantity': 1
+      });
+    }
+    if ($('#courseTitle').text() == "Top 20 IRA Rules Every Tax Practitioner Should Know (IRUL)") {
+      ga('ec:addProduct', {
+        'id': 'IRUL-2016-01-BDCST',
+        'name': 'TOP 20 IRA RULES EVERY TAX PRACTITIONER SHOULD KNOW (IRUL)',
+        'category': 'Broadcast',
+        'brand': 'All Star Tax',
+        'variant': '2016',
+        'price': 85.00,
+        'quantity': 1
+      });
+    }
+    if ($('#courseTitle').text() == "Advising Clients Who Are Buying or Selling a Small or Medium-sized Business (BSEL)") {
+      ga('ec:addProduct', {
+        'id': 'BSEL-2016-01-BDCST',
+        'name': 'ADVISING CLIENTS WHO ARE BUYING OR SELLING A SMALL OR MEDIUM-SIZED BUSINESS (BSEL)',
+        'category': 'Broadcast',
+        'brand': 'All Star Tax',
+        'variant': '2016',
+        'price': 85.00,
+        'quantity': 1
+      });
+    }
+    if ($('#courseTitle').text() == "Tax and Financial Challenges of Retirement Planning: Social Security, Medicare and Elder Care (TCRP)") {
+      ga('ec:addProduct', {
+        'id': 'TCRP-2016-01-BDCST',
+        'name': 'TAX AND FINANCIAL CHALLENGES OF RETIREMENT PLANNING: SOCIAL SECURITY, MEDICARE AND ELDER CARE (TCRP)',
+        'category': 'Broadcast',
+        'brand': 'All Star Tax',
+        'variant': '2016',
+        'price': 85.00,
+        'quantity': 1
+      });
+    }
+    if ($('#courseTitle').text() == "Top 20 Tax Planning Strategies to Implement Before Year-end (PSIM)") {
+      ga('ec:addProduct', {
+        'id': 'PSIM-2016-01-BDCST',
+        'name': 'TOP 20 TAX PLANNING STRATEGIES TO IMPLEMENT BEFORE YEAR-END (PSIM)',
+        'category': 'Broadcast',
+        'brand': 'All Star Tax',
+        'variant': '2016',
+        'price': 85.00,
+        'quantity': 1
+      });
+    }
+    if ($('#courseTitle').text() == "Individual Tax Update (INTX)") {
+      ga('ec:addProduct', {
+        'id': 'INTX-2016-01-BDCST-321-01',
+        'name': 'INDIVIDUAL TAX UPDATE (INTX)',
+        'category': 'Broadcast',
+        'brand': 'All Star Tax',
+        'variant': '2016',
+        'price': 85.00,
+        'quantity': 1
+      });
+    }
+    if ($('#courseTitle').text() == "Getting Ready for Busy Season: New IRS Forms and Compliance Requirements (RDBS)") {
+      ga('ec:addProduct', {
+        'id': 'RDBS-2017-01-BDCST',
+        'name': 'GETTING READY FOR BUSY SEASON: NEW IRS FORMS AND COMPLIANCE REQUIREMENTS (RDBS)',
+        'category': 'Broadcast',
+        'brand': 'All Star Tax',
+        'variant': '2016',
+        'price': 85.00,
+        'quantity': 1
+      });
+    }
+    if ($('#courseTitle').text() == "Basis Rules: Key Concepts for Partnerships, LLCs and S Corporations (BRLS)") {
+      ga('ec:addProduct', {
+        'id': 'BRLS-2016-01-BDCST',
+        'name': 'BASIS RULES: KEY CONCEPTS FOR PARTNERSHIPS, LLCS AND S CORPORATIONS (BRLS)',
+        'category': 'Broadcast',
+        'brand': 'All Star Tax',
+        'variant': '2016',
+        'price': 85.00,
+        'quantity': 1
+      });
+    }
+    if ($('#courseTitle').text() == "Tax Update for Small and Medium-Sized Businesses and their Owners (BSTX)") {
+      ga('ec:addProduct', {
+        'id': 'BSTX-2016-01-BDCST',
+        'name': 'TAX UPDATE FOR SMALL AND MEDIUM-SIZED BUSINESSES AND THEIR OWNERS (BSTX)',
+        'category': 'Broadcast',
+        'brand': 'All Star Tax',
+        'variant': '2016',
+        'price': 85.00,
+        'quantity': 1
+      });
+    }
+    ga('ec:setAction', 'add');
+    ga('send', 'event', 'e-Commerce', 'click', 'Product Adds To Cart');
+  });
+
+</script>

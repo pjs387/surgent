@@ -1,0 +1,10 @@
+<script>
+  ga('ec:setAction', 'purchase', {
+
+    'id': $('#invoiceBody').find("strong").first().text()
+
+  });
+
+  ga('send', 'event', 'e-Commerce', 'click', 'Checkout Steps')
+
+</script>

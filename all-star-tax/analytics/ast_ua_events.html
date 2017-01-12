@@ -1,0 +1,13 @@
+<script>
+  $('.customUL,.btn,.linkColor').on('click', function(e) {
+    var element = $(this),
+      eventLabel = element.data('event-label')
+    eventCategory = element.data('event-category');
+    eventLabel = (eventLabel ? eventLabel : element.text());
+    eventCategory = (eventCategory ? eventCategory : window.location.pathname);
+
+    ga('send', 'event', eventCategory, 'click', eventLabel);
+
+  });
+
+</script>
