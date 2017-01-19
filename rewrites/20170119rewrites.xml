@@ -1,0 +1,14 @@
+<!-- CPE Now - Redirects -->
+
+<add key="/blog-detail/8th-annual-mccoy-award-and-surgent-outstanding-discussion-leader-of-the-year-recipients-announced" value="/blog/8th-annual-mccoy-award-and-surgent-outstanding-discussion-leader-of-the-year-recipients-announced" />
+
+<!-- CPA Review - Rewrites -->
+
+<add key="/asap-technology" value="/cpareview/asap-technology" />
+
+<!-- CPA Review - Redirects -->
+
+<add key="/cpa-blog-detail/2015-audit-considerations" value="/cpa-blog/2015-audit-considerations" />
+<add key="/cpa-blog-detail/discounted-aicpa-cpa-exam-candidate-membership" value="/cpa-blog/discounted-aicpa-cpa-exam-candidate-membership" />
+<add key="/cpa-blog-detail/next-cpa-exam-sample-test-now-available" value="/cpa-blog/next-cpa-exam-sample-test-now-available" />
+<add key="/cpa-blog-detail/surgent-cpa-review-announces-new-college-scholarship-program" value="/cpa-blog/surgent-cpa-review-announces-new-college-scholarship-program" />
