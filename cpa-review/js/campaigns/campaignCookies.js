@@ -10,6 +10,7 @@ var medium = getParameterByName('utm_medium');
 var campaign = getParameterByName('utm_campaign');
 var term = getParameterByName('utm_term');
 var content = getParameterByName('utm_content');
+var code = getParameterByName('utm_code');
 var campaignID = getParameterByName('campaignID');
  
 if($.cookie('utm_source') == null || $.cookie('utm_source') == "") {
@@ -26,6 +27,9 @@ $.cookie('utm_term');
 }
 if($.cookie('utm_content') == null || $.cookie('utm_content') == "") {
 $.cookie('utm_content');
+}
+if($.cookie('utm_code') == null || $.cookie('utm_code') == "") {
+$.cookie('utm_code');
 }
 if($.cookie('campaignID') == null || $.cookie('campaignID') == "") {
 $.cookie('campaignID');

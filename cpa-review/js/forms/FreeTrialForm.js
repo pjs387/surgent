@@ -1,8 +1,8 @@
 function submitTrialForm2() {
-	if ("" == $("#ctl00_ContentPlaceHolder1_C006_ctl00_ctl00_ctl00_C006_ctl00_ctl00_txtText").val() || 
-		"" == $("#ctl00_ContentPlaceHolder1_C006_ctl00_ctl00_ctl00_C007_ctl00_ctl00_txtText").val() || 
-		"" == $("#ctl00_ContentPlaceHolder1_C006_ctl00_ctl00_ctl00_C008_ctl00_ctl00_txtText").val() || 
-		"" == $("#ctl00_ContentPlaceHolder1_C006_ctl00_ctl00_ctl00_C009_ctl00_ctl00_txtText").val())
+	if ("" == $("#ctl00_ContentPlaceHolder1_C006_ctl00_ctl00_ctl00_C014_ctl00_ctl00_txtText").val() || 
+		"" == $("#ctl00_ContentPlaceHolder1_C006_ctl00_ctl00_ctl00_C015_ctl00_ctl00_txtText").val() || 
+		"" == $("#ctl00_ContentPlaceHolder1_C006_ctl00_ctl00_ctl00_C016_ctl00_ctl00_txtText").val() || 
+		"" == $("#ctl00_ContentPlaceHolder1_C006_ctl00_ctl00_ctl00_C028_ctl00_ctl00_txtText").val())
 	{
 		return;
 	}
@@ -80,14 +80,13 @@ function submitTrialForm2() {
 		}
 	}); 
 	
-	//frm.submit();
-	//ga("send", "event", "Submit", "click", "CPA Review Submit Free Trial");
-	//window.uetq = window.uetq || [];
-	//window.uetq.push({
-	//	ec: "Submit",
-	//	ea: "On Click",
-	//	el: "CPA Review Free Trial",
-	//	ev: 0
-	//});
-	//fbq("track", "CompleteRegistration");
+	ga("send", "event", "Submit", "click", "CPA Review Submit Free Trial");
+	window.uetq = window.uetq || [];
+	window.uetq.push({
+		ec: "Submit",
+		ea: "On Click",
+		el: "CPA Review Free Trial",
+		ev: 0
+	});
+	fbq("track", "CompleteRegistration");
 }
